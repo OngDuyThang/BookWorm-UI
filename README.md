@@ -1,4 +1,4 @@
-# BookWorm UI — Storefront Single-Page Application
+# BookWorm UI — Storefront Web Application
 
 [![Next.js](https://img.shields.io/badge/Next.js-13.5-000000?logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-18.0-61DAFB?logo=react&logoColor=black)](https://react.dev/)
@@ -44,7 +44,7 @@
 
 ## Architectural Overview & System Context
 
-**BookWorm UI** functions as the customer-facing single-page storefront within the larger BookWorm e-commerce ecosystem. The backend is partitioned into independent NestJS microservices communicating over RabbitMQ RPC, each guarding its own PostgreSQL database.
+**BookWorm UI** functions as the customer-facing storefront web application within the larger BookWorm e-commerce ecosystem. The backend is partitioned into independent NestJS microservices communicating over RabbitMQ RPC, each guarding its own PostgreSQL database.
 
 Instead of funneling all requests through a monolithic API Gateway, this frontend coordinates requests directly to the responsible microservices using a hybrid client approach:
 - **Apollo Client (GraphQL)**: Dispatches typed GraphQL queries and mutations dynamically to the **Product**, **Cart**, and **Order** microservices.
